@@ -4,7 +4,7 @@
 // Authors:
 //  Andrea Schiavinato <andrea.schiavinato84@gmail.com>
 //
-// Copyright (C) 2016 Andrea Schiavinato 
+// Copyright (C) 2019 Andrea Schiavinato 
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the
@@ -464,6 +464,7 @@ namespace VimeoUploader
             HttpWebRequest r = (HttpWebRequest)WebRequest.Create(uri);
             r.Method = method;
             r.Headers[HttpRequestHeader.Authorization] = authorization;
+            r.Accept = "application/vnd.vimeo.*+json;version=3.2";            
             if (headers != null)
             {
                 foreach (var h in headers)

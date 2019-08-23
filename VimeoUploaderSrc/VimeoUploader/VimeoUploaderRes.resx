@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>VimeoUploader.exe 1.0.0.0 - May 2016
+    <value>VimeoUploader.exe 1.1.0.0 - August 2019
 
 SYNTAX: 
   Vimeouploader &lt;command&gt; -t=&lt;token&gt; -f=&lt;videofile&gt; -pf=&lt;picturefile&gt; -pt=&lt;picturetime&gt; -v=&lt;video id&gt; -n=&lt;video name&gt; -d=&lt;video description&gt; -cf=&lt;folder to check for video upload&gt; -df=&lt;folder for uploaded videos&gt; -ci=&lt;check interval&gt;

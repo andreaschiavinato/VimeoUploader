@@ -4,7 +4,7 @@
 // Authors:
 //  Andrea Schiavinato <andrea.schiavinato84@gmail.com>
 //
-// Copyright (C) 2016 Andrea Schiavinato 
+// Copyright (C) 2019 Andrea Schiavinato 
 //
 // Permission is hereby granted, free of charge, to any person obtaining
 // a copy of this software and associated documentation files (the
@@ -178,6 +178,12 @@ namespace VimeoUploader
             {
                 ProgramOptions opt = ReadOptions(args);
 
+                if (opt.Command == CMD_HELP)
+                {
+                    Console.WriteLine(VimeoUploaderRes.About);
+                    return;
+                }
+
                 VimeoApi vimeo = new VimeoApi(opt.Token);
 
                 if (opt.Command == CMD_LV)
@@ -245,7 +251,7 @@ namespace VimeoUploader
                         vimeo.SetPicture(opt.VideoId, opt.TimePicture);
                     Console.WriteLine("Done");
                 }
-                    
+
                 else if (opt.Command == CMD_SAVETOKEN)
                 {
                     vimeo.SaveAuth();
@@ -262,11 +268,6 @@ namespace VimeoUploader
                         MonitorFld(vimeo, opt.CheckFolder, opt.DestFolder);
                         Thread.Sleep(opt.CheckInterval);
                     }
-                }
-
-                else if (opt.Command == CMD_HELP)
-                {                    
-                    Console.WriteLine(VimeoUploaderRes.About);
                 }
                 
             }
